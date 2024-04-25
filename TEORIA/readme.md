@@ -40,7 +40,9 @@
 
 ![image](https://user-images.githubusercontent.com/91023374/234879873-bb42e5f6-be4f-4fc2-b4cc-7ea556346903.png)
 
-El CRUD es un acrónimo que significa Create, Read, Update y Delete. Estas son las cuatro operaciones básicas que podemos realizar sobre una base de datos
+El CRUD es un acrónimo que significa Create, Read, Update y Delete. 
+
+Estas son las cuatro operaciones básicas que podemos realizar sobre una base de datos (insert, select, update, delete)
 
 ## Patrón de diseño: DAO
 
