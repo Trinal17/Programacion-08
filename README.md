@@ -1,6 +1,6 @@
 # Gestión de bases de datos relacionales y persistencia
 
-<img src="https://github.com/profeMelola/-Programacion-08-2023-24-/assets/91023374/2dbc38b5-318e-4d50-b407-1b58e4195367" height="200"/>
+<img src="https://github.com/profeMelola/-Programacion-08-2023-24-/assets/91023374/2dbc38b5-318e-4d50-b407-1b58e4195367" height="100"/>
 
 SQLite es una biblioteca o base de datos ligera e independiente, que ya está integrada en numerosas aplicaciones. Destaca sobre todo por la ausencia de una estructura cliente-servidor.
 
