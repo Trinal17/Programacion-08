@@ -2,6 +2,15 @@
 
 ## SQLite
 
+<img src="https://github.com/profeMelola/-Programacion-08-2023-24-/assets/91023374/2dbc38b5-318e-4d50-b407-1b58e4195367" height="100"/>
+
+SQLite es una biblioteca o base de datos ligera e independiente, que ya está integrada en numerosas aplicaciones. Destaca sobre todo por la ausencia de una estructura cliente-servidor.
+
+El código de SQLite es de dominio público y, por lo tanto, es de uso gratuito para cualquier propósito, comercial o privado. SQLite es la base de datos más implementada en el mundo con más aplicaciones de las que podemos contar, incluidos varios proyectos de alto perfil.
+
+SQLite lee y escribe directamente en archivos de disco ordinarios. Una base de datos SQL completa con varias tablas, índices, disparadores y vistas está contenida en un solo archivo de disco. 
+
+https://www.sqlite.org/
 
 ## Driver JDBC: dependencia
 
