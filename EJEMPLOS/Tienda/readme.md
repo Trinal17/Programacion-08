@@ -35,19 +35,19 @@ Tendremos dos servlets:
 
 #### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
 
-<img src="https://user-images.githubusercontent.com/91023374/236147497-30b576a2-e261-449c-85be-8192095838fd.png" height="200px"/>
+<img src="https://user-images.githubusercontent.com/91023374/236147497-30b576a2-e261-449c-85be-8192095838fd.png" height="300px"/>
 
 #### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
-<img src="https://user-images.githubusercontent.com/91023374/236151179-8c72e070-2cc8-4c71-ab50-bcb98103c185.png" height="200px"/>
+<img src="https://user-images.githubusercontent.com/91023374/236151179-8c72e070-2cc8-4c71-ab50-bcb98103c185.png" height="300px"/>
 
 ___
 
-<img src="https://user-images.githubusercontent.com/91023374/235313345-fdab822e-35a2-4cc0-88f9-508b0a36e25e.png" height="200px"/>
+<img src="https://user-images.githubusercontent.com/91023374/235313345-fdab822e-35a2-4cc0-88f9-508b0a36e25e.png" height="100px"/>
 
 ___
 
-<img src="https://user-images.githubusercontent.com/91023374/236151374-86d5ee72-d8f7-42b5-aa65-bb6021baf569.png" height="200px"/>
+<img src="https://user-images.githubusercontent.com/91023374/236151374-86d5ee72-d8f7-42b5-aa65-bb6021baf569.png" height="300px"/>
 
 
 
