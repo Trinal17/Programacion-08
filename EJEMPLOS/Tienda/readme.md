@@ -2,7 +2,7 @@
 
 ![Captura de pantalla de 2024-04-25 20-42-00](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/aa73fee6-f328-4082-84f6-708f6929ad9e)
 
-# Práctica guiada: primer programa JDBC
+# 1. Práctica guiada: primer programa JDBC
 
 Vamos a obtener el listado de todos los fabricantes.
 
@@ -14,5 +14,39 @@ Vamos a obtener el listado de todos los fabricantes.
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/9d6af45a-f960-4423-b07d-5368d066c8c7)
 
+___
+
+# 2. Tienda JDBC DAO
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/79b85a89-84e3-4059-89af-7eac50fbb1c6)
+
+Vamos a realizar las cuatro operaciones básicas contra una tabla usando la base de datos **tienda**.
+
+**[ C ]** **Create:** daremos de alta un producto indicando todos los campos necesarios (nombre, precio, fabricante).
+
+**[ R ]** **Read:** obtendremos el listado de todos los productos.
+
+**[ U ]** **Update:** actualizaremos el nombre de un producto.
+
+**[ D ]** **Delete:** borraremos un producto por id.
+
+### Servlets
+Tendremos dos servlets:
+
+#### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
+
+![image](https://user-images.githubusercontent.com/91023374/236147497-30b576a2-e261-449c-85be-8192095838fd.png)
+
+#### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
+
+![image](https://user-images.githubusercontent.com/91023374/236151179-8c72e070-2cc8-4c71-ab50-bcb98103c185.png)
+
+___
+
+![image](https://user-images.githubusercontent.com/91023374/235313345-fdab822e-35a2-4cc0-88f9-508b0a36e25e.png)
+
+___
+
+![image](https://user-images.githubusercontent.com/91023374/236151374-86d5ee72-d8f7-42b5-aa65-bb6021baf569.png)
 
 
