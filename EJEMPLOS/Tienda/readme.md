@@ -15,8 +15,12 @@ Vamos a obtener el listado de todos los fabricantes.
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/9d6af45a-f960-4423-b07d-5368d066c8c7)
 
 ___
+# 2. Tienda V2: con interface Dao genérica
 
-# 2. Tienda JDBC DAO
+Tiene la misma funcionalidad que la tienda v1 pero el código es diferente, usa la interface DAO genérica.
+
+___
+# 3. Tienda CRUD DAO
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/79b85a89-84e3-4059-89af-7eac50fbb1c6)
 
