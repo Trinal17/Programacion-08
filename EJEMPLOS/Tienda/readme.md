@@ -52,7 +52,6 @@ Una vez realizada la inserción correctamente, aparecerá el listado de producto
 
 ___
 
-<img src="https://user-images.githubusercontent.com/91023374/236151374-86d5ee72-d8f7-42b5-aa65-bb6021baf569.png" height="300px"/>
 
 
 
