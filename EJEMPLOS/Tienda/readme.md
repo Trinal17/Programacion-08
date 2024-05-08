@@ -35,7 +35,7 @@ Tendremos dos servlets:
 
 #### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
 
-<img src="https://user-images.githubusercontent.com/91023374/236147497-30b576a2-e261-449c-85be-8192095838fd.png" height="300px"/>
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/bf0d0086-3648-46ae-9610-d52e56191b0f" height="300px"/>
 
 #### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
