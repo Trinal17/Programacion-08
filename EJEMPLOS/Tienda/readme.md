@@ -35,18 +35,20 @@ Tendremos dos servlets:
 
 #### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
 
-<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/bf0d0086-3648-46ae-9610-d52e56191b0f" height="300px"/>
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/bf0d0086-3648-46ae-9610-d52e56191b0f" height="400px"/>
 
 #### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
 Ejemplo de inserción:
 
-<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/6b7f09ef-6c2f-419c-9a3b-567f460c8f47" height="300px"/>
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/6b7f09ef-6c2f-419c-9a3b-567f460c8f47" height="400px"/>
 
 
 ___
 
-<img src="https://user-images.githubusercontent.com/91023374/235313345-fdab822e-35a2-4cc0-88f9-508b0a36e25e.png" height="100px"/>
+Una vez realizada la inserción correctamente, aparecerá el listado de productos ordenados por código descendentemente:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/f4edf22d-5017-4d17-88bb-593dcba159e4" height="100px"/>
 
 ___
 
