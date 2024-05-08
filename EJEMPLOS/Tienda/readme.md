@@ -52,6 +52,11 @@ Una vez realizada la inserción correctamente, aparecerá el listado de producto
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/59e3ff37-6fdb-442e-b9ed-78c39f151f26" height="200px"/>
 
+Ha desaparecido el producto con código 13:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/23c7ff4b-322e-4c6a-a06f-4939aca119b1" height="400px"/>
+
+
 
 
 
