@@ -48,7 +48,7 @@ ___
 
 Una vez realizada la inserción correctamente, aparecerá el listado de productos ordenados por código descendentemente:
 
-<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/f4edf22d-5017-4d17-88bb-593dcba159e4" height="100px"/>
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/f4edf22d-5017-4d17-88bb-593dcba159e4" height="400px"/>
 
 ___
 
