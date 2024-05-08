@@ -40,10 +40,18 @@ Cuando se haya creado el empleado correctamente el Servlet2 el mensaje:
 El empleado NOMBRE APELLIDO1 se ha dado de alta correctamente
 ```
 
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/82fea845-843f-4e8c-be62-684b70e1d39c)
+
+
+
+
 Antes de dar de alta el empleado, hay que verificar que el código de oficina exista. En caso de que no sea así, el Servlet2 redirigirá la salida a la página error.jsp con el mensaje 
 ```
 ERROR: El código de oficina ALCALA-ES no existe en la base de datos
 ```
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/337577d2-087f-4003-a631-b763605a4d06)
+
 
 Observa que en los datos de prueba aparece el código **ALCALA-ES en el textarea (código que no existe)**. Te servirá para tus pruebas. Debes insertar al menos dos empleados bien.
 
