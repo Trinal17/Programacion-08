@@ -1,0 +1,8 @@
+es\daw\web\JAXRSConfiguration.class
+es\daw\web\bd\Dao.class
+es\daw\web\filter\CorsFilter.class
+es\daw\web\bd\DBConnection.class
+es\daw\web\model\Fabricante.class
+es\daw\web\resource\SampleResource.class
+es\daw\web\servlet\Dao1Servlet.class
+es\daw\web\bd\DaoFabricante.class
