@@ -39,7 +39,10 @@ Tendremos dos servlets:
 
 #### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
-<img src="https://user-images.githubusercontent.com/91023374/236151179-8c72e070-2cc8-4c71-ab50-bcb98103c185.png" height="300px"/>
+Ejemplo de inserción:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/6b7f09ef-6c2f-419c-9a3b-567f460c8f47" height="300px"/>
+
 
 ___
 
