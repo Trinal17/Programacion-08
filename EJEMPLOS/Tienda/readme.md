@@ -66,9 +66,14 @@ Vamos a cambiar el nombre a un producto, concretamente el que tiene código 12:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/39603387-0d51-4105-b0ee-e1059ae5af83" height="400px"/>
 
+
 [image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b11eb9de-1be7-4655-904f-22b527d0ec88)
 
-![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/260082e9-6357-45fe-a406-97cce8b008e4)
+
+En el nuevo listado aparece el nombre actualizado:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/260082e9-6357-45fe-a406-97cce8b008e4" height="400px"/>
+
 
 
 
