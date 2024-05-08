@@ -30,27 +30,29 @@ Vamos a realizar las cuatro operaciones básicas contra una tabla usando la base
 
 **[ D ]** **Delete:** borraremos un producto por id.
 
-### Servlets
+## SERVLETS
 Tendremos dos servlets:
 
-#### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
+### SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/bf0d0086-3648-46ae-9610-d52e56191b0f" height="400px"/>
 
-#### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
+### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
-Ejemplo de inserción:
+#### Ejemplo de inserción:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/6b7f09ef-6c2f-419c-9a3b-567f460c8f47" height="400px"/>
-
-
 ___
 
 Una vez realizada la inserción correctamente, aparecerá el listado de productos ordenados por código descendentemente:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/f4edf22d-5017-4d17-88bb-593dcba159e4" height="400px"/>
 
-___
+#### Ejemplo de borrado:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/59e3ff37-6fdb-442e-b9ed-78c39f151f26" height="400px"/>
+
+
 
 
 
