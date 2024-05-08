@@ -60,6 +60,13 @@ Ha desaparecido el producto con código 13:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/23c7ff4b-322e-4c6a-a06f-4939aca119b1" height="400px"/>
 
+### Ejemplo de actualización:
+
+Vamos a cambiar el nombre a un producto, concretamente el que tiene código 12:
+
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/39603387-0d51-4105-b0ee-e1059ae5af83" height="400px"/>
+
+
 
 
 
