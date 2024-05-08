@@ -39,6 +39,8 @@ Tendremos dos servlets:
 
 ### SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE)
 
+___
+
 #### Ejemplo de inserción:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/6b7f09ef-6c2f-419c-9a3b-567f460c8f47" height="400px"/>
@@ -47,6 +49,8 @@ ___
 Una vez realizada la inserción correctamente, aparecerá el listado de productos ordenados por código descendentemente:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/f4edf22d-5017-4d17-88bb-593dcba159e4" height="400px"/>
+
+___
 
 #### Ejemplo de borrado:
 
