@@ -66,9 +66,9 @@ Vamos a cambiar el nombre a un producto, concretamente el que tiene código 12:
 
 <img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/39603387-0d51-4105-b0ee-e1059ae5af83" height="400px"/>
 
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/e899b665-3ddc-4586-9516-8a4fc50698a5" height="200px"/>
 
-[image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b11eb9de-1be7-4655-904f-22b527d0ec88)
-
+___
 
 En el nuevo listado aparece el nombre actualizado:
 
