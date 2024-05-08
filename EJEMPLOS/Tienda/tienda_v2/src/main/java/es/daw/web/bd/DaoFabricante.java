@@ -11,12 +11,14 @@ import es.daw.web.model.Fabricante;
 
 public class DaoFabricante implements Dao<Fabricante>{
     
+    // -------------
 	private Connection con;
 	
     public DaoFabricante(String dbSettingsPropsFilePath) throws SQLException {
 		super();
 		con = DBConnection.getConnection(dbSettingsPropsFilePath);
 	}
+    // -------------
 
     @Override
     public Fabricante select(int id) throws SQLException {
@@ -25,19 +27,23 @@ public class DaoFabricante implements Dao<Fabricante>{
 
     @Override
     public List<Fabricante> selectAll() throws SQLException {
-        try (PreparedStatement ps = con.prepareStatement("SELECT * FROM fabricante");
+        try (PreparedStatement ps = con.prepareStatement("SELECT codigo,nombre FROM fabricante");
         ResultSet rs = ps.executeQuery()){
 
-	        List<Fabricante> result = null;
+	        //List<Fabricante> result = null;
+            List<Fabricante> result = new ArrayList<>();
 	
 	        while (rs.next()) {
-	            if (result == null) {
-	                result = new ArrayList<>();
-	            }
+	            // if (result == null) {
+	            //     result = new ArrayList<>();
+	            // }
 	
 	            Fabricante p = new Fabricante();
-	            p.setCodigo(rs.getInt("codigo"));
-	            p.setNombre(rs.getString("nombre"));
+	            // p.setCodigo(rs.getInt("codigo"));
+	            // p.setNombre(rs.getString("nombre"));
+
+	            p.setCodigo(rs.getInt(1));
+	            p.setNombre(rs.getString(2));
 	            result.add(p);
 	            
 	        }

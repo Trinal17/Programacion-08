@@ -46,16 +46,17 @@ public class Dao1Servlet extends HttpServlet {
         // ------------ SALIDA ------------
         response.setContentType("text/html");
 
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1> LISTADO DE FABRICANTES </h1>");
-        out.println("<table border='1'><tr><th>CÓDIGO</th><th>FABRICANTE</th></tr>");
-
-        for (Fabricante fabricante : fabricantes) {
-            out.println("<tr><td>"+fabricante.getCodigo()+"</td><td>"+fabricante.getNombre()+"</td></tr>");
+        try(PrintWriter out = response.getWriter()){
+            out.println("<html><body>");
+            out.println("<h1> LISTADO DE FABRICANTES </h1>");
+            out.println("<table border='1'><tr><th>CÓDIGO</th><th>FABRICANTE</th></tr>");
+    
+            for (Fabricante fabricante : fabricantes) {
+                out.println("<tr><td>"+fabricante.getCodigo()+"</td><td>"+fabricante.getNombre()+"</td></tr>");
+            }
+    
+            out.println("</body></html>");
         }
-
-        out.println("</body></html>");
     }
 
     @Override
