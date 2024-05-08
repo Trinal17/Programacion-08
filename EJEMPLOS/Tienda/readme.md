@@ -50,7 +50,7 @@ Una vez realizada la inserción correctamente, aparecerá el listado de producto
 
 #### Ejemplo de borrado:
 
-<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/59e3ff37-6fdb-442e-b9ed-78c39f151f26" height="400px"/>
+<img src="https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/59e3ff37-6fdb-442e-b9ed-78c39f151f26" height="200px"/>
 
 
 
