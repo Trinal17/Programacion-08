@@ -53,4 +53,14 @@ Observa que en los datos de prueba aparece el código **ALCALA-ES en el textarea
 
 Por otro lado, si se produjera cualquier excepcion (SQLException, IOException ….), el Servlet2 también redirigirá el mensaje de error a error.jsp.
 
+### 3. Fichero de log de usuarios dados de alta
+
+Añade en **Servlet2** el código necesario para que cada vez que se de de alta un usuario esta información se registre en un fichero de log situado en un directorio llamado LOGS del directorio home del usuario.
+
+- Ese directorio no debes crearlo a mano.
+- El fichero de log se llamará empleados.log.
+- Cada información sobre un nuevo empleado (toString()) se añadirá como una nueva línea empezando con la fecha en formato dd/MM/YYYY HH:mm:ss (revisa la clase Utils.java)
+  
+
+
 
