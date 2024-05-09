@@ -55,7 +55,7 @@ Por otro lado, si se produjera cualquier excepcion (SQLException, IOException 鈥
 
 ### 3. Fichero de log de usuarios dados de alta
 
-A帽ade en **Servlet2** el c贸digo necesario para que cada vez que se de de alta un usuario esta informaci贸n se registre en un fichero de log situado en un directorio llamado LOGS del directorio home del usuario.
+A帽ade en **Servlet2** el c贸digo necesario para que cada vez que se de de alta un usuario esta informaci贸n se registre en un **fichero de log situado en un directorio llamado LOG del directorio home del usuario.**
 
 - Ese directorio no debes crearlo a mano.
 - El fichero de log se llamar谩 empleados.log.
