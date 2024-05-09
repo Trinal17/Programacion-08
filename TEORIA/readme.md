@@ -12,6 +12,11 @@ SQLite lee y escribe directamente en archivos de disco ordinarios. Una base de d
 
 https://www.sqlite.org/
 
+### Crear una base de datos vacía 
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/fcd4bb19-ab52-4b06-aa3a-e58be8d354fc)
+
+
 ## Driver JDBC: dependencia
 
  A añadir en el pom.xml de nuestro proyecto Maven:
