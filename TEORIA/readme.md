@@ -16,6 +16,26 @@ https://www.sqlite.org/
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/fcd4bb19-ab52-4b06-aa3a-e58be8d354fc)
 
+### Visual Studio Code + SQLite
+
+#### Instalar la extensión:
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/fa7e2196-cf7d-4298-964e-a0956c2a5e97)
+
+___
+
+#### Ejecutar sql
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b69d3d0b-338c-4150-8030-13349a676799)
+
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/9f10f714-c1b8-48b6-943f-88fe40a3e2f6)
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/c4e6cd9d-b29e-484d-a897-50e18b7ccdd9)
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/7a13e1b6-6048-4a58-8388-efb478795e44)
+
+
 
 ## Driver JDBC: dependencia
 
