@@ -8,7 +8,7 @@
 
 ## Especificaciones
 
-### Informe personalizado de Oficina
+### 1. Informe personalizado de Oficina
 
 Al hacer click en el botón de **Obtener Informe** se generará una página html con una tabla que contendrá información de la oficina cuyo código se haya seleccionado en la lista html.
 
@@ -31,7 +31,7 @@ En el caso de que no se haya seleccionado ningún campo, el **Servlet1** parará
 - Debes trabajar con las colecciones de los pedidos y los clientes para obtener la información. No debes realizar querys complejas (joins) contra base de datos cruzando las dos tablas.
 - Las ordenaciones también se realizan directamente sobre las colecciones Java. No debes hacer order by en la query contra la B.D
 
-### Dara de alta un empleado a través de datos en formato CSV
+### 2.Dar de alta un empleado a través de datos en formato CSV
 
 El **Servlet2** va a recibir una cadena de texto con toda la información necesaria para dar de alta un empleado en la base de datos.
 
