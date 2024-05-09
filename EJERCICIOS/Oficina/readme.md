@@ -8,7 +8,7 @@
 
 ## Especificaciones
 
-### INFORME PERSONALIZADO DE OFICINA
+### Informe personalizado de Oficina
 
 Al hacer click en el botón de **Obtener Informe** se generará una página html con una tabla que contendrá información de la oficina cuyo código se haya seleccionado en la lista html.
 
@@ -18,17 +18,20 @@ La lista de códigos de oficina es monoselección, por tanto el informe resultad
 
 En el caso de que no se haya seleccionado ningún campo, el **Servlet1** parará de procesar y redirigirá la salida a la página error.html (response.sendRedirect("error.html"))
 
+**Ejemplos de salida:**
+
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/e0f9e403-438c-4465-821c-b927dae83339)
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b4503288-b97e-4e41-ad5f-88ccf990a480)
 
 
-**A TENER EN CUENTA A LA HORA DE PROGRAMAR:**
+**A tener en cuenta a la hora de programar:**
+
 - Toda la información del informe se obtiene de las colecciones que has cargado y tienes en memoria. 
 - Debes trabajar con las colecciones de los pedidos y los clientes para obtener la información. No debes realizar querys complejas (joins) contra base de datos cruzando las dos tablas.
 - Las ordenaciones también se realizan directamente sobre las colecciones Java. No debes hacer order by en la query contra la B.D
 
-### DAR DE ALTA UN EMPLEADO A TRAVÉS DE DATOS EN FORMATO CSV
+### Dara de alta un empleado a través de datos en formato CSV
 
 El **Servlet2** va a recibir una cadena de texto con toda la información necesaria para dar de alta un empleado en la base de datos.
 
@@ -41,7 +44,6 @@ El empleado NOMBRE APELLIDO1 se ha dado de alta correctamente
 ```
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/82fea845-843f-4e8c-be62-684b70e1d39c)
-
 
 
 
