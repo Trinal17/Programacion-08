@@ -51,6 +51,19 @@ Antes de dar de alta el empleado, hay que verificar que el código de oficina ex
 Observa que en los datos de prueba aparece el código **ALCALA-ES en el textarea (código que no existe)**. Te servirá para tus pruebas. Debes insertar al menos dos empleados bien.
 
 Por otro lado, si se produjera cualquier excepcion (SQLException, IOException ….), el Servlet2 también redirigirá el mensaje de error a error.jsp.
+___
+
+#### 2.1 Para comprobar que se ha dado de alta el empleado correctamente
+
+El **Servlet3** se ejecutará para mostrar la lista de empleados. El código se proporciona completo. No debes tocar nada!!!
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/3feccffa-b296-43ce-9fe4-f0f832f8925f)
+
+Obtendrás un informe como el siguiente:
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/85bb9b13-3c94-427a-a0ba-4504e87f8671)
+
+___
 
 ### 3. Fichero de log de usuarios dados de alta
 
