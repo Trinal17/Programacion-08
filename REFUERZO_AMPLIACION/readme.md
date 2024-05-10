@@ -31,3 +31,5 @@ Además, para reforzar las operaciones CRUD con JDBC, crea otro servlet **Servle
 - Borrado.
 
 ![alt text](image-1.png)
+
+Actualiza **index.html** en tu proyecto.
