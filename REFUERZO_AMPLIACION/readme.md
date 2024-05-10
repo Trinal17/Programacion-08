@@ -9,7 +9,7 @@ Actualiza **index.html** en tu proyecto.
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/358a4ec9-bdd6-4d6a-8fdf-1ca50a5b21b3)
 
 
-Verás que hay una nueva sección para obtener el listado de productos dependiendo del fabricante.
+Verás que hay una **nueva sección para obtener el listado de productos dependiendo del fabricante.**
 
 Aparece una lista multiselección.
 
@@ -20,3 +20,14 @@ Como resultado debe mostrarse:
 - Diferentes tablas de productos, una por fabricante.
 
   
+## Oficina
+
+Puedes modificar la lista de oficinas para que sea multiselección y aparezcan tantos informes como oficinas se hayan seleccionado.
+
+![alt text](image.png)
+
+Además, para reforzar las operaciones CRUD con JDBC, crea otro servlet **Servlet4** encargado de operaciones de:
+- Actualización.
+- Borrado.
+
+![alt text](image-1.png)

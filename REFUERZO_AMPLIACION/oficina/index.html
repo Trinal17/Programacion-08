@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OficinasJDBC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            body {
+                font-size: 16px;
+                font-family: sans-serif;
+            }
+
+            h1, h2{
+                text-align: center;
+            }
+
+            form{
+                margin: 15px auto;
+                width: 60%;
+            }
+            /* Definimos una clase para los fieldset principales,
+           con efectos de borde y sombra */
+
+            .fieldset-principal {
+                padding-left: 2em;
+                padding-right: 2em;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 2px solid #395870;
+                box-shadow: 3px 6px 2px rgba(0, 0, 0, .3);
+            }
+            /*
+        * Le damos algo de espacio y bordes a la leyenda del fieldset,
+        * además de colocarla en negrilla y un fondo con gradiente
+        */
+
+            .fieldset-principal>legend {
+                padding: 0.2em 0.5em;
+                border: 1px solid;
+                background: #395870;
+                background: linear-gradient(#49708f, #293f50);
+                color: white;
+            }
+
+            legend {
+                font-weight: bold;
+            }
+            /*
+        * Hacemos que las etiquetas de los campos estén en negrilla, con algo
+        * de espacio y en su propia línea
+        */
+
+            label[for] {
+                margin-top: 0.5em;
+                font-weight: bold;
+                display: block;
+            }
+            /*
+        * Las etiquetas de los checkbox y botones radio
+        * no son etiquetas de campos, sino de las opciones, así que
+        * las colocamos en formato normal
+        */
+
+            label input[type="checkbox"],
+            label input[type="radio"] {
+                display: inline;
+                font-weight: normal;
+            }
+
+            /* Damos formato a los botones con gradientes y efecto hover */
+            button {
+                padding: 0 5px 0 5px;
+                height: 25px;
+                line-height: 20px;
+                border: 2px solid #395870;
+                border-radius: 6px;
+                background: #395870;
+                background: linear-gradient(#49708f, #293f50);
+                font-weight: bold;
+                font-size: 16px;
+                color: white;
+            }
+
+            button:hover {
+                background: #314b60;
+                box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>Informe personalizado de oficina</h2>
+            <form action="Servlet1" method="POST">
+                <fieldset class="fieldset-principal">
+                    <legend>Selecciona el código de la oficina</legend>
+                    <select name="cod_oficina" id="cod_oficina" multiple>
+                        <option value="BCN-ES" selected>BCN-ES</option>
+                        <option value="BOS-USA">BOS-USA</option>
+                        <option value="LON-UK">LON-UK</option>
+                        <option value="MAD-ES">MAD-ES</option>
+                        <option value="PAR-FR">PAR-FR</option>
+                        <option value="SFC-USA">SFC-USA</option>
+                        <option value="SYD-AU">SYD-AU</option>
+                        <option value="TAL-ES">TAL-ES</option>
+                        <option value="TOK-JP">TOK-JP</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldset-principal">
+                    <legend>Campos a mostrar en el informe:</legend>
+                    <p>
+                        <label>
+                            <input name="campo" type="checkbox" value="ciudad"/>Ciudad
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="campo" type="checkbox" value="pais"/>Pais
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="campo" type="checkbox" value="telefono"/>Telefono
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="campo" type="checkbox" value="direccion"/>Dirección
+                        </label>
+                    </p>
+
+                </fieldset>
+                    <p>
+                        <button name="enviar" type="submit">Obtener informe</button>
+                        <button name="reiniciar" type="reset">Borrar selección</button>
+                    </p>
+            </form>
+            <form action="Servlet4" method="POST">
+                <fieldset class="fieldset-principal">
+                    <legend>Actualizar/Borrar empleado por código de empleado</legend>
+                    <p>
+                        Actualizar nombre del empleado: <input type="radio" name="update_delete" required/>
+                    </p>
+                    <p>
+                        Borrar empleado: <input type="radio" name="update_delete" required/>
+                    </p>
+                    <p>
+                        Código del empleado: <input type="text" name="codigo_empleado" required/>
+                    </p>
+                    <p>
+                        Nombre del empleado: <input type="text" name="nombre_empleado" />
+                    </p>
+
+                    <p></p>
+                    <button type="submit">Actualizar/Borrar</button>
+                </fieldset>
+            </form>
+            <h2>Dar de alta a un empleado:</h2>
+            <form action="Servlet2" method="POST">
+                <fieldset class="fieldset-principal">
+                    <legend>Datos del empleado en formato CSV</legend>
+                    <textarea name="empleado" rows="2" cols="100" required >MariLuz,Elola,Rubio,2519,melola@educa.madrid.org,ALCALA-ES,Subdirector oficina</textarea>
+                    <p></p>
+                    <button type="submit">Dar de alta</button>
+                </fieldset>
+            </form>
+            <form action="Servlet3" method="GET">
+                <fieldset class="fieldset-principal">
+                    <legend>Ver todos los empleados</legend>
+                    <p style="text-align: center;">De esta forma podrás comprobar si se ha insertado el nuevo empleado</p>
+                    <button type="submit">Ver empleados</button>
+                </fieldset>
+                
+            </form>
+
+        </main>
+    </body>
+</html>
