@@ -1,6 +1,6 @@
 # Refuerzo y ampliación
 
-Usando las dos bases de datos con las que hemos trabajado en clase, vas a amplía/modifica dichos proyectos.
+Usando las dos bases de datos con las que hemos trabajado en clase, vas a amplíar/modificar dichos proyectos.
 
 ## Tienda
 
