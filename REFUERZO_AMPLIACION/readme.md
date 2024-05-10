@@ -26,10 +26,13 @@ Puedes modificar la lista de oficinas para que sea multiselección y aparezcan t
 
 ![alt text](image.png)
 
+___
+
 Además, para reforzar las operaciones CRUD con JDBC, crea otro servlet **Servlet4** encargado de operaciones de:
 - Actualización.
 - Borrado.
 
 ![alt text](image-1.png)
 
+___
 Actualiza **index.html** en tu proyecto.
