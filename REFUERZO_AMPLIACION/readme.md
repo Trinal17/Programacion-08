@@ -34,5 +34,7 @@ Además, para reforzar las operaciones CRUD con JDBC, crea otro servlet **Servle
 
 ![alt text](image-1.png)
 
+Mejora el código comprobando que el código del empleado exista. Si no es así que se devuelva un mensaje de error.
+
 ___
 Actualiza **index.html** en tu proyecto.
