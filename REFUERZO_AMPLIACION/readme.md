@@ -4,4 +4,19 @@ Usando las dos bases de datos con las que hemos trabajado en clase, vas a amplí
 
 ## Tienda
 
-Crea en 
+Actualiza **index.html** en tu proyecto.
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/358a4ec9-bdd6-4d6a-8fdf-1ca50a5b21b3)
+
+
+Verás que hay una nueva sección para obtener el listado de productos dependiendo del fabricante.
+
+Aparece una lista multiselección.
+
+Implementa el código necesario en un nuevo Servlet llamado **Dao3Servlet**
+
+Como resultado debe mostrarse:
+- Una única tabla con el resultado de todos los productos de los fabricantes seleccionados.
+- Diferentes tablas de productos, una por fabricante.
+
+  
