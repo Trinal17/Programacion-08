@@ -1,0 +1,30 @@
+[
+    {
+        "NIF": "12345678A",
+        "nombre": "Nombre1",
+        "apellido1": "Apellido11",
+        "apellido2": "Apellido12",
+        "codigo_departamento": 1 
+    },
+    {
+        "NIF": "12345678B",
+        "nombre": "Nombre2",
+        "apellido1": "Apellido21",
+        "apellido2": "Apellido22",
+        "codigo_departamento": 2 
+    },
+    {
+        "NIF": "12345678C",
+        "nombre": "Nombre3",
+        "apellido1": "Apellido31",
+        "apellido2": "Apellido32",
+        "codigo_departamento": 3 
+    },
+    {
+        "NIF": "12345678B",
+        "nombre": "Nombre2",
+        "apellido1": "Apellido21",
+        "apellido2": "Apellido22",
+        "codigo_departamento": 2 
+    }
+]
