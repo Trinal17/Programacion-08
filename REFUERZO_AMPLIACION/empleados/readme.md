@@ -1,5 +1,8 @@
 # Gestión de empleados
 
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/e26aec01-9fbf-4f84-b4d5-de9372e5a524)
+
+
 ## Informes
 
 Existen diferentes formas de mostrar el informe de los empleados, tanto por el departamento al que pertenecen los empleados como por la ordenación.
@@ -40,6 +43,8 @@ Hay que controlar si el departamento elegido de la lista no existe. Para tus pru
 
 Esta comprobación debes hacerla vía java y no sql, por tanto no debes usar una consulta contra la base de datos. Hazlo mediante un método estático en la clase Utils.java. 
 
+Si el departamento no existe, debe devolverse la página resultado_mensaje.jsp con el siguiente mensaje: 
+
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/61fe2a09-463b-4c5f-b0a2-86e6d5a5c95f)
 
 ### Ordenaciones
@@ -51,11 +56,12 @@ Esta comprobación debes hacerla vía java y no sql, por tanto no debes usar una
 
 - Es necesario leer el archivo JSON llamado empleados.json que se encuentra en el directorio webapp del proyecto. Como puedes observar, el json contiene cuatro empleados.
 - Esos cuatro empleados se deben cargar en un array de objetos Empleado. Para ello usa:
-  ```
+```
 Empleado[] empleados = gson.fromJson(reader, Empleado[].class); 
 // reader es el encargado de leer el archivo Json
-  ```
+```
 - Una vez cargado el array, píntalo por consola en el siguiente formato:
+  
 ```
 ******** EMPLEADOS DEL JSON  **************
 NIF: 12345678A
@@ -64,11 +70,10 @@ Apellido1: Apellido11
 Apellido2: Apellido12
 Código departamento: 1
 
-
 NIF: 12345678B
 ….
-
 ```
+
 - Por un fallo informático, el JSON tiene empleados repetidos. 
     - Antes de insertar debes comprobar que no haya empleados repetidos, teniendo en cuenta que un empleado es igual a otro si coinciden su NIF.
     - Muestra por consola los empleados no repetidos:
@@ -82,4 +87,31 @@ NIF: 12345678B
 
 - Una vez ejecuta con éxito la inserción, si vuelves a ejecutar la carga masiva, obtendrás una excepción porque el nif tiene una restricción unique: org.sqlite.SQLiteException
 - Captura correctamente la excepción y muestra su mensaje (getMessage())  en la página resultado_mensaje.jsp
+  
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b9c99087-37a6-4407-9f17-8fb09253ea49)
+
+
+## Exportación CSV
+
+Vas a implementar una simulación de exportación a CSV:
+
+- En la carpeta home del usuario se debe crear una carpeta llamada CSV_EXAM donde se va a realizar la exportación.
+- No puedes crear ese directorio a mano. 
+- Ten en cuenta que la exportación se puede ejecutar tantas veces como se quiera. 
+- Dentro de esa carpeta CSV se crearán tantas subcarpetas como departamentos haya.
+- Usa la colección que se proporciona en el código. 
+- El nombre de la subcarpeta se corresponderá con el nombre del departamento. 
+- En cada una de esas subcarpetas, debe crearse un ARCHIVO CSV llamado: YYYY-MM-DD_nombreDepartamento.csv
+- En cada uno de esos archivos CSV habrá información de los empleados de cada departamento. 
+- La primera línea será informativa: #CÓDIGO, NIF, NOMBRE
+- Utiliza el método Utils.obtenerEmpleadosServlet3() para obtener una lista de empleados a exportar en formato CSV.
+- Dependiendo del código del departamento de cada empleado, la información de dicho empleado debe escribirse en su correspondiente fichero CSV.
+- Si vuelvo a exportar debe sobreescribirse el contenido de los CSV.
+- Como resultado:
+
+  ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/508006c7-886c-466e-9b92-b55780184d77)
+
+
+Si todo ha ido bien, esta sería la estructura de carpetas y el contenido de cada archivo CSV:
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/c552d151-47c9-48c5-b933-9911d0ecf948)
