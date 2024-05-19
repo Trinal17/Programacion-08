@@ -2,7 +2,7 @@
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/e26aec01-9fbf-4f84-b4d5-de9372e5a524)
 
-
+___
 ## Informes
 
 Existen diferentes formas de mostrar el informe de los empleados, tanto por el departamento al que pertenecen los empleados como por la ordenación.
@@ -11,6 +11,7 @@ Existen diferentes formas de mostrar el informe de los empleados, tanto por el d
 
 Dependiendo de lo seleccionado en la lista, los empleados a mostrar pueden ser de todos los departamentos (todos los empleados) o de un departamento en concreto.
 
+___
 ### Mostrar todos los empleados
 
 Observa la lista html. Cada departamento tiene asociado su correspondiente código y que en el caso de querer mostrar todos los empleados, el código recibido será 0.
@@ -25,6 +26,7 @@ En la tabla debe aparecer el nombre del departamento, no el código. Para obtene
 
 Ten en cuenta que hay empleados que no tienen departamento, es null  (revisa los datos de la primera página del enunciado). En vez de aparecer NULL en el campo departamento de la tabla, debe aparecer “sin_departamento”
 
+___
 ### Mostrar los empleados de un departamento concreto
 
 Por ejemplo, si se selecciona el departamento desarrollo, los empleados serán:
@@ -37,6 +39,7 @@ Si el departamento no tiene empleados, la tabla saldrá vacía, por ejemplo el d
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/362e0ef0-9274-4b5b-ad6a-cf1e26f0062d)
 
+___
 ### Comprobar que el departamento exista
 
 Hay que controlar si el departamento elegido de la lista no existe. Para tus pruebas, el departamento “Creativo” no existe en base de datos. 
@@ -47,11 +50,13 @@ Si el departamento no existe, debe devolverse la página resultado_mensaje.jsp c
 
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/61fe2a09-463b-4c5f-b0a2-86e6d5a5c95f)
 
+___
 ### Ordenaciones
 
 - Si se selecciona el ordenado por NIF, los empleados deben de aparecer acordes a la ordenación natural.
 - Si se selecciona el ordenado por nombre, los empleados deben aparecer ordenados solo por “nombre” de forma ascendente
 
+___
 ## Importación JSON: carga masiva de empleados en BD
 
 - Es necesario leer el archivo JSON llamado empleados.json que se encuentra en el directorio webapp del proyecto. Como puedes observar, el json contiene cuatro empleados.
@@ -91,6 +96,7 @@ NIF: 12345678B
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/b9c99087-37a6-4407-9f17-8fb09253ea49)
 
 
+___
 ## Exportación CSV
 
 Vas a implementar una simulación de exportación a CSV:
