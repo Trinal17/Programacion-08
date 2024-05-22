@@ -1,6 +1,6 @@
 # Sistema de gestión de incidencias
 
-Debes implementar una aplicación de escritorio.
+Debes implementar una aplicación de consola.
 
 Las especificaciones están en el documento PDF.
 
