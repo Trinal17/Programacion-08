@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OficinasJDBC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            body {
+                font-size: 16px;
+                font-family: sans-serif;
+            }
+
+            h1, h2{
+                text-align: center;
+            }
+
+            form{
+                margin: 15px auto;
+                width: 60%;
+            }
+            /* Definimos una clase para los fieldset principales,
+           con efectos de borde y sombra */
+
+            .fieldset-principal {
+                padding-left: 2em;
+                padding-right: 2em;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 2px solid #395870;
+                box-shadow: 3px 6px 2px rgba(0, 0, 0, .3);
+            }
+            /*
+        * Le damos algo de espacio y bordes a la leyenda del fieldset,
+        * además de colocarla en negrilla y un fondo con gradiente
+        */
+
+            .fieldset-principal>legend {
+                padding: 0.2em 0.5em;
+                border: 1px solid;
+                background: #395870;
+                background: linear-gradient(#49708f, #293f50);
+                color: white;
+            }
+
+            legend {
+                font-weight: bold;
+            }
+            /*
+        * Hacemos que las etiquetas de los campos estén en negrilla, con algo
+        * de espacio y en su propia línea
+        */
+
+            label[for] {
+                margin-top: 0.5em;
+                font-weight: bold;
+                display: block;
+            }
+            /*
+        * Las etiquetas de los checkbox y botones radio
+        * no son etiquetas de campos, sino de las opciones, así que
+        * las colocamos en formato normal
+        */
+
+            label input[type="checkbox"],
+            label input[type="radio"] {
+                display: inline;
+                font-weight: normal;
+            }
+
+            /* Damos formato a los botones con gradientes y efecto hover */
+            button {
+                padding: 0 5px 0 5px;
+                height: 25px;
+                line-height: 20px;
+                border: 2px solid #395870;
+                border-radius: 6px;
+                background: #395870;
+                background: linear-gradient(#49708f, #293f50);
+                font-weight: bold;
+                font-size: 16px;
+                color: white;
+            }
+
+            button:hover {
+                background: #314b60;
+                box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>Gestión de empleados (MARI LUZ)</h2>
+            <form action="Servlet1" method="GET">
+                <fieldset class="fieldset-principal">
+                    <legend>Informes de empleados por departamento</legend>
+                    <p>
+                        <label for="departamento">Departamento:</label>
+                        <select name="cod_departamento">
+                            <option value="0">TODOS</option>
+                            <option value="1">Desarrollo</option>
+                            <option value="2">Sistemas</option>
+                            <option value="3">Recursos Humanos</option>
+                            <option value="4">Contabilidad</option>
+                            <option value="5">I+D</option>
+                            <option value="6">Proyectos</option>
+                            <option value="7">Publicidad</option>
+                            <option value="8">Creativo</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="orden">Ordenación del informe:</label>
+                        <p><input type="radio" name="orden" value="sin_orden" required checked>Sin ordenar</p>
+                        <p><input type="radio" name="orden" value="orden_nif" required>Ordenado por NIF (ordenación natural)</p>
+                        <p><input type="radio" name="orden" value="orden_nombre" required>Ordenado por nombre</p>
+                    </p>
+                    <button type="submit">Listar</button>
+                </fieldset>
+            </form>
+
+            <form action="Servlet2" method="GET">
+                <fieldset class="fieldset-principal">
+                    <legend>Importar empleados a través de JSON</legend>
+
+                    <p>
+                        <button name="enviar" type="submit">Insertar empleados</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <form action="Servlet3" method="GET">
+                <fieldset class="fieldset-principal">
+                    <legend>Exportar empleados en formato CSV</legend>
+                    <p>
+                        <button type="submit">Exportar a CSV</button>
+                    </p>
+                </fieldset>
+            </form>
+
+        </main>
+    </body>
+</html>
