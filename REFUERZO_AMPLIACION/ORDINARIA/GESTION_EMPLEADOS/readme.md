@@ -77,3 +77,32 @@ ___
 ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/a0f81796-520b-4223-ae68-aa44f83fb6d9)
 
 
+## Exportación CSV
+
+Vas a implementar una simulación de exportación a CSV:
+
+- En la carpeta home del usuario se debe crear una carpeta llamada CSV_EXAM donde se va a realizar la exportación.
+  - No puedes crear ese directorio a mano. 
+  - Ten en cuenta que la exportación se puede ejecutar tantas veces como se quiera. 
+
+- Dentro de esa carpeta CSV se crearán tantas subcarpetas como departamentos haya.
+  - Usa la colección que se proporciona en el código. 
+  - El nombre de la subcarpeta se corresponderá con el nombre del departamento. 
+
+- En cada una de esas subcarpetas, debe crearse un ARCHIVO CSV llamado: YYYY-MM-DD_nombreDepartamento.csv
+
+- En cada uno de esos archivos CSV habrá información de los empleados de cada departamento. 
+  - La primera línea será informativa: #CÓDIGO, NIF, NOMBRE
+
+- Utiliza el método Utils.obtenerEmpleadosServlet3() para obtener una lista de empleados a exportar en formato CSV.
+  - Dependiendo del código del departamento de cada empleado, la información de dicho empleado debe escribirse en su correspondiente fichero CSV.
+  - Si vuelvo a exportar debe sobreescribirse el contenido de los CSV.
+  - Como resultado debes devolver la página resultado_mensaje.jsp con el mensaje siguiente:
+
+    ![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/bb8e55b5-78bf-4263-af58-6f00c35e1780)
+
+  - En caso de excepción (IOException) debe devolverse el mensaje de la excepción.
+
+  - Si todo ha ido bien, esta sería la estructura de carpetas y el contenido de cada archivo CSV:
+
+![image](https://github.com/profeMelola/Programacion-08-2023-24/assets/91023374/590e12d1-d583-4816-a868-1bbf813f6ce1)
