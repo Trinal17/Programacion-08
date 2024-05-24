@@ -1,10 +1,17 @@
 package es.daw.web;
 
 import es.daw.web.bd.DBConnection;
+import es.daw.web.model.Empleado;
+import es.daw.web.util.Utils;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import jakarta.servlet.ServletException;
@@ -48,16 +55,38 @@ public class Servlet3 extends HttpServlet {
         departamentos.put(3,"Contabilidad");
 
 
-        
+        // Path al directorio padre CSV_EXAM
+        Path home = Paths.get(System.getProperty("user.home"),"CSV_EXAM");
+        // Path home2 = Paths.get(System.getProperty("user.home")+"/CSV_EXAM");
+        // Path home3 = Paths.get(System.getProperty("user.home")+File.separator+"CSV_EXAM");
 
+        // Si no existe el CSV_EXAM lo creo
+        // if (!Files.exists(home))
+        //         Files.createDirectory(home);
 
+        // Crear los subdirectorios
+        for (Map.Entry<Integer,String> departamento : departamentos.entrySet()){
+            Utils.crearCSV(home, departamento.getValue());
+        }
+
+        // Obtener los empleados a insertar en los distintos CSV
+        List<Empleado> empleados = Utils.obtenerEmpleadosServlet3();
+
+        for (Empleado empleado : empleados) {
+            Integer cod_dpto = empleado.getCodigo_departamento();
+
+            String nombreDepartamento = departamentos.get(cod_dpto);
+
+            Utils.escribirEnCSV(empleado,home,nombreDepartamento);
+
+        }
 
         // --------------------------------------
         // RESULTADO
         response.setContentType("text/html;charset=UTF-8");
 
         // El mensaje varía dependiendo de si ha habido error o no
-        request.setAttribute("message", "Resultado Servlet 3??????????????????????????????");
+        request.setAttribute("message", "Realizada la exportación correctamente");
 
         getServletContext().getRequestDispatcher("/resultado_mensaje.jsp").forward(request, response);
 

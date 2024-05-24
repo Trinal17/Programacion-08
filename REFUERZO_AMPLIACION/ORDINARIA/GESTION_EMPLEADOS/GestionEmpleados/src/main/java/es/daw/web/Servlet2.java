@@ -1,9 +1,18 @@
 package es.daw.web;
 
 import es.daw.web.bd.DBConnection;
+import es.daw.web.bd.DaoEmpleado;
+import es.daw.web.model.Empleado;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -48,13 +57,55 @@ public class Servlet2 extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
 
-        
-        
+        DaoEmpleado daoE = null;
 
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
+        String message = "";
+        boolean error = false;
 
+        try(FileReader reader = new FileReader(pathJson)){
 
+            Empleado[] empleados = gson.fromJson(reader, Empleado[].class);
 
+            Set<Empleado> empleadosSet = new HashSet<>();
+            System.out.println("****** EMPLEADOS DEL JSON *********");
+            for (Empleado empleado : empleados) {
+                System.out.println("NIF: " + empleado.getNIF());
+                System.out.println("Nombre: " + empleado.getNombre());
+                System.out.println("Apellido1: " + empleado.getApellido1());
+                System.out.println("Apellido2: " + empleado.getApellido2());
+                System.out.println("Código departamento: " + empleado.getCodigo_departamento());
+                System.out.println();
+
+                empleadosSet.add(empleado);
+            }      
+
+            // Meter los objetos del array en un Set
+            //Set<Empleado> empleadosSet = new HashSet<>(Arrays.asList(empleados));
+
+            System.out.println("************* EMPLEADOS DEL JSON SIN REPETIR **********");
+            empleadosSet.forEach(System.out::println);
+
+            
+
+            try {
+                daoE = new DaoEmpleado(pathProperties);
+
+                for (Empleado empleado : empleadosSet) {
+                    daoE.insert(empleado);
+                    message += empleado.getNIF()+" ";
+                }
+
+            } catch (SQLException e) {
+                
+                e.printStackTrace();
+                System.out.println(e.getMessage());
+                message = e.getMessage();
+                error = true;
+            }
+
+        }
 
 
         // --------------------------------------
@@ -62,7 +113,10 @@ public class Servlet2 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         // El mensaje varía dependiendo de si ha habido error o no
-        request.setAttribute("message", "Resultado Servlet 2 ??????????????????????????????");
+        if (error)
+            request.setAttribute("message", " [ERROR] "+message);    
+        else
+            request.setAttribute("message", "Insertados los empleados con NIF "+message);
 
         getServletContext().getRequestDispatcher("/resultado_mensaje.jsp").forward(request, response);
         

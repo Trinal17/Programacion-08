@@ -1,5 +1,11 @@
 package es.daw.web.util;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,6 +98,54 @@ public class Utils {
         }
 
         return empleadosFiltrados;
+
+    }
+
+    /**
+     * crearCSV
+     * @param home
+     * @param departamento
+     * @throws IOException
+     */
+    public static void crearCSV(Path home, String departamento) throws IOException{
+
+        Path subCarpeta = Paths.get(departamento);
+        Path pathTotalSubCarpeta = home.resolve(subCarpeta);
+
+        String cabecera = "#CÓDIGO,NIF,NOMBRE";
+
+        // Creamos la subcarpeta (y ruta completa) del departamento
+        if(!Files.exists(pathTotalSubCarpeta))
+            Files.createDirectories(pathTotalSubCarpeta);
+
+
+        // Creamos el fichero CSV dentro de dicha subcarpeta
+        Path fichero = Paths.get(LocalDate.now()+"_"+departamento+".csv"); //nombre
+        Path path_fichero = pathTotalSubCarpeta.resolve(fichero); //ruta completa y el nombre
+
+        Files.write(path_fichero,cabecera.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+
+
+    }
+
+    /**
+     * escribirEnCSV
+     * @param empleado
+     * @param home
+     * @param departamento
+     * @throws IOException
+     */
+    public static void escribirEnCSV(Empleado empleado, Path home, String departamento) throws IOException{
+        Path subCarpeta = Paths.get(departamento); // un path al nombre del departamento
+        Path pathTotalSubcarpeta = home.resolve(subCarpeta);
+        Path fichero = Paths.get(LocalDate.now()+"_"+departamento+".csv"); //nombre
+        Path path_fichero = pathTotalSubcarpeta.resolve(fichero); //ruta completa y el nombre
+
+        //String cabecera = "#CÓDIGO,NIF,NOMBRE";
+        String linea = "\n"+empleado.getCodigo()+","+empleado.getNIF()+","+empleado.getNombre();
+
+        Files.write(path_fichero,linea.getBytes(), StandardOpenOption.APPEND);
+
 
     }
 

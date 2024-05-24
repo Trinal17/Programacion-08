@@ -57,10 +57,21 @@ public class DaoEmpleado implements Dao<Empleado>{
 
     @Override
     public void insert(Empleado t) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insert'");
-    }
+        
+        //nif,nombre,apellido1,apellido2,codigo_departamento
+        try ( PreparedStatement ps = con.prepareStatement("INSERT INTO empleado (nif, nombre, apellido1, apellido2, codigo_departamento) VALUES (?, ?, ?, ?, ?)")) {
+            ps.setString(1, t.getNIF());
+            ps.setString(2, t.getNombre());
+            ps.setString(3, t.getApellido1());
+            ps.setString(4, t.getApellido2());
+            ps.setInt(5, t.getCodigo_departamento());
 
+            ps.executeUpdate();
+
+        }
+
+    }
+    
     @Override
     public void update(Empleado t) throws SQLException {
         // TODO Auto-generated method stub
