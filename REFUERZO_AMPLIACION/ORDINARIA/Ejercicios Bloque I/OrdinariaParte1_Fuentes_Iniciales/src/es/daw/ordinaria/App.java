@@ -1,0 +1,26 @@
+package es.daw.ordinaria;
+
+import es.daw.ordinaria.util.Ejercicio1;
+import es.daw.ordinaria.util.Ejercicio3;
+import es.daw.ordinaria.util.Ejercicio2;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        
+        // NO TOCAR ESTA CLASE!!!
+        
+        System.out.println("************ EJERCICIO 1 **************");
+        Ejercicio1.ejecuta();
+
+        System.out.println("************ EJERCICIO 2 **************");
+        Ejercicio2.ejecuta();
+
+        System.out.println("************ EJERCICIO 3 **************");
+        Ejercicio3.ejecuta();
+
+
+
+    }
+
+
+}
