@@ -1,6 +1,7 @@
 package es.daw.ordinaria.util;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -26,7 +27,13 @@ public class Ejercicio5 {
         //     <option value="666">Cliente FAKE</option>
         // </select>
 
-        int id_cliente = 2;
+        // -----------------------------
+        // NO HAY GETPARAMETER....
+        int id_cliente = 2; //probar con 8
+        //int id_cliente_fake = 666;
+        //int id_cliente = 666;
+        // -----------------------------
+
 
         //List<Cliente> clientes = null;
         DaoCliente daoC = null;
@@ -34,37 +41,53 @@ public class Ejercicio5 {
         List<Pedido> pedidos = null;
         //List<Cliente> clientes = null;
 
-        StringBuilder sb = new StringBuilder();
-
         String nombreApellido = "";
 
         try {
             daoP = new DaoPedido();
             daoC = new DaoCliente();
+
+            // BORRO EL PEDIDO CORRUPTO QUE TIENE ID 17....
+            System.out.println("* BORRAR PEDIDO CORRUPTO CON ID 17!!!!!");
+            daoP.delete(17);
+
             //clientes = daoC.selectAll();
             pedidos = daoP.selectAll();
+
 
             System.out.println("********** PEDIDOS ******");
             pedidos.forEach(System.out::println);
 
-            // Ordenados por precio ascendente!!! 0,5 PUNTOS!!!!
+            // Ordenados por precio descendente!!!
             pedidos.sort((p1,p2) -> Double.valueOf(p2.getPrecio()).compareTo(Double.valueOf(p1.getPrecio())));
 
             Cliente c = daoC.select(id_cliente);
             System.out.println("Cliente:"+c);
 
-            // COMPROBAR QUE EL CLIENTE EXISTA.... 1,25 PUNTOS!!!!
+            // // COMPROBAR QUE EL CLIENTE EXISTA....
             if (c == null){
                 System.out.println("El cliente con id "+id_cliente+" no existe");
+            }else{
+                nombreApellido = c.getNombre()+" "+c.getApellido1();
+                System.out.println("nombreApellido:"+nombreApellido);
+    
+                // Listar
+                pedidos = Utils.obtenerPedidosDelCliente(id_cliente, pedidos);
+                System.out.println("********* PEDIDOS FILTRADOS **********");
+                System.out.println("Pedidos del cliente "+nombreApellido);
+                pedidos.forEach(System.out::println);
+
+                insertarPedido(daoP);
+                System.out.println("Se ha insertado correctamente el nuevo pedido");
+                // Quiero pintar de nuevo la lista de pedidos
+                pedidos = daoP.selectAll();
+
+                System.out.println("********** PEDIDOS ******");
+                pedidos.forEach(System.out::println);
+    
+
+
             }
-
-            nombreApellido = c.getNombre()+" "+c.getApellido1();
-            System.out.println("nombreApellido:"+nombreApellido);
-
-            // Listar
-            pedidos = Utils.obtenerPedidosDelCliente(id_cliente, pedidos);
-            System.out.println("********* PEDIDOS FILTRADOS **********");
-            pedidos.forEach(System.out::println);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -74,4 +97,29 @@ public class Ejercicio5 {
 
 
     }
+
+    private static void insertarPedido(DaoPedido daoP) throws SQLException{
+        Pedido pedidoNuevo = new Pedido();
+        pedidoNuevo.setPrecio(12000);
+        pedidoNuevo.setFecha(LocalDate.now());
+        pedidoNuevo.setIdCliente(666); // Adela Salas
+
+        // COMPROBAR QUE EL CLIENTE EXISTE, SI NO EXISTE NO INSERTO EL PEDIDO
+        // PARA NO CREAR PEDIDOS INCONSISTENTES
+        // EN ESE CASO PROPAGAR UNA EXCEPCIÓN PROPIA ClienteNoExisteException
+        daoP.insert(pedidoNuevo);
+
+
+
+    }
+
+    // PENDIENTE HACER UN UPDATE DE LO QUE SE QUIERA...
+    //private static void actualizarXXX();
+
+    // PENDIENTE HACER UN BORRADO DE PEDIDO CUYO TOTAL SE > QUE XXXX
+    //DELETE FROM PEDIDO WHERE TOTAL > ?
+    // Pedido p = new Pedido();
+    // p.setPrecio(5000);
+    // ? => pedido.getTotal();
+
 }

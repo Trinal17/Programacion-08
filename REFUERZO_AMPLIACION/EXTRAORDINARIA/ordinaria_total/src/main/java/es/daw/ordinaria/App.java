@@ -19,10 +19,10 @@ public class App {
         // System.out.println("************ EJERCICIO 3 **************");
         // Ejercicio3.ejecuta();
 
-        // System.out.println("************ EJERCICIO 4: FICHEROS **************");
-        // Ejercicio4.ejecuta();
+        //System.out.println("************ EJERCICIO 4: FICHEROS **************");
+        //Ejercicio4.ejecuta();
 
-        System.out.println("************ EJERCICIO 5: JDBC **************");
+        //System.out.println("************ EJERCICIO 5: JDBC **************");
         Ejercicio5.ejecuta();
 
 

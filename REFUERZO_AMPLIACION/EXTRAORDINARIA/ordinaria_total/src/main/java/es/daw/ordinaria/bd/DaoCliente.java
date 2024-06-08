@@ -37,6 +37,11 @@ public class DaoCliente implements Dao<Cliente>{
                 c.setNombre(rs.getString("nombre"));
                 c.setApellido1(rs.getString("apellido1"));
             }
+            // else{
+            //     c = new Cliente();
+            //     c.setNombre("Desconocido");
+            //     c.setApellido1("");
+            // }
 
             return c;
 

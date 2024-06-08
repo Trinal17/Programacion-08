@@ -45,8 +45,11 @@ public class DaoPedido implements Dao<Pedido>{
 
                 Pedido p = new Pedido();
                 p.setId(rs.getInt("id"));
+                System.out.println("**********> "+rs.getInt("id"));
 
                 String dateString = rs.getString("fecha");
+
+                System.out.println("**********> "+dateString);
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                 LocalDate localDate = LocalDate.parse(dateString, formatter);                
                 //p.setFecha(rs.getDate("fecha").toLocalDate());
@@ -72,7 +75,8 @@ public class DaoPedido implements Dao<Pedido>{
                 + "VALUES (?, ?, ?)")){
             
             ps.setDouble(1, t.getPrecio());
-            ps.setDate(2, java.sql.Date.valueOf(t.getFecha()));
+            //ps.setDate(2, java.sql.Date.valueOf(t.getFecha()));
+            ps.setString(2, t.getFecha().toString());
             ps.setInt(3, t.getIdCliente());
             
             ps.executeUpdate();
@@ -93,8 +97,11 @@ public class DaoPedido implements Dao<Pedido>{
 
     @Override
     public void delete(int id) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        try(PreparedStatement ps = con.prepareStatement("DELETE FROM pedido WHERE id = ? ")) {
+            
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        }
     }
     
 }
