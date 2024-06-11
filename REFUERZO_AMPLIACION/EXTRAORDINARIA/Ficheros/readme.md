@@ -1,6 +1,6 @@
 # EL QUIJOTE
 
-Debes realizar un programa que lea un fichero de texto llamado quijote.txt.
+Debes realizar un programa que lea un fichero de texto llamado **quijote.txt.**
 
 Implementa:
 
