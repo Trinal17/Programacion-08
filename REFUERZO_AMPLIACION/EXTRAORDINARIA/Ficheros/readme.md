@@ -11,9 +11,12 @@ Implementa:
 
 Los directorios previamente no existen y si ya existe el fichero de backup debe sobreescribirse.
 
+___
+
 Para que te sirva de referencia, estos son los resultados a obtener:
-Número de líneas:17
-Número de palabras: 217
-Número de caracteres: 1224
+
+- Número de líneas:17
+- Número de palabras: 217
+- Número de caracteres: 1224
 
 
