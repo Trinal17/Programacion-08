@@ -30,8 +30,6 @@ public class DaoPedido implements Dao<Pedido>{
     @Override
     public List<Pedido> selectAll() throws SQLException {
 
-        System.out.println("OBTENIENDO PEDIDOS...........");
-
         try(PreparedStatement ps = con.prepareStatement("SELECT id,total,fecha,id_cliente FROM pedido")){
             
             ResultSet rs = ps.executeQuery();
@@ -45,11 +43,9 @@ public class DaoPedido implements Dao<Pedido>{
 
                 Pedido p = new Pedido();
                 p.setId(rs.getInt("id"));
-                System.out.println("**********> "+rs.getInt("id"));
 
                 String dateString = rs.getString("fecha");
 
-                System.out.println("**********> "+dateString);
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                 LocalDate localDate = LocalDate.parse(dateString, formatter);                
                 //p.setFecha(rs.getDate("fecha").toLocalDate());
@@ -85,14 +81,23 @@ public class DaoPedido implements Dao<Pedido>{
 
     @Override
     public void update(Pedido t) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+        String query = "UPDATE pedido SET total = ? where id = ?";
+        try(PreparedStatement ps = con.prepareStatement(query)){
+            ps.setDouble(1,t.getPrecio());
+            ps.setInt(2,t.getId());
+
+            ps.executeUpdate();
+        }
     }
 
     @Override
     public void delete(Pedido t) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        try(PreparedStatement ps = con.prepareStatement("DELETE FROM pedido WHERE total > ? ")) {
+            
+            ps.setDouble(1, t.getPrecio());
+            ps.executeUpdate();
+        }
+
     }
 
     @Override

@@ -81,12 +81,17 @@ public class Ejercicio5 {
                 System.out.println("Se ha insertado correctamente el nuevo pedido");
                 // Quiero pintar de nuevo la lista de pedidos
                 pedidos = daoP.selectAll();
+                pintaPedidos(pedidos, daoP);
 
-                System.out.println("********** PEDIDOS ******");
-                pedidos.forEach(System.out::println);
+                System.out.println("********* ACTUALIZAR PRECIO PEDIDO ID 17 A 1 EURO");
+                actualizarPedido(daoP);
+                pintaPedidos(pedidos, daoP);
+
+
+                System.out.println("**** BORRAR PEDIDOS CUYO PRECIO SUPERA UN VALOR");
+                borrarPedido(daoP);
+                pintaPedidos(pedidos, daoP);
     
-
-
             }
 
         } catch (SQLException e) {
@@ -98,6 +103,11 @@ public class Ejercicio5 {
 
     }
 
+    /**
+     * insertarPedido
+     * @param daoP
+     * @throws SQLException
+     */
     private static void insertarPedido(DaoPedido daoP) throws SQLException{
         Pedido pedidoNuevo = new Pedido();
         pedidoNuevo.setPrecio(12000);
@@ -113,13 +123,43 @@ public class Ejercicio5 {
 
     }
 
-    // PENDIENTE HACER UN UPDATE DE LO QUE SE QUIERA...
-    //private static void actualizarXXX();
+    /**
+     * actualizarPedido
+     * @param daoP
+     * @throws SQLException
+     */
+    private static void actualizarPedido(DaoPedido daoP) throws SQLException{
+        // Enunciado: actualiza el pedido con id 
+        Pedido pedidoAct = new Pedido();
+        pedidoAct.setPrecio(1);
+        pedidoAct.setId(17);
 
-    // PENDIENTE HACER UN BORRADO DE PEDIDO CUYO TOTAL SE > QUE XXXX
-    //DELETE FROM PEDIDO WHERE TOTAL > ?
-    // Pedido p = new Pedido();
-    // p.setPrecio(5000);
-    // ? => pedido.getTotal();
+        daoP.update(pedidoAct);
 
+    }
+
+
+    /**
+     * Método que borrar los pedidos cuyo precio sea superior a un valor dado
+     * @param daoP
+     * @throws SQLException
+     */
+    private static void borrarPedido(DaoPedido daoP) throws SQLException{
+        Pedido p = new Pedido();
+        p.setPrecio(2000);
+
+        daoP.delete(p);
+    }
+
+    private static void pintaPedidos(List<Pedido> pedidos, DaoPedido daoP) throws SQLException{
+        System.out.println("********** PEDIDOS ACTUALIZADOS ******");
+        pedidos = daoP.selectAll();
+        pedidos.forEach(System.out::println);
+
+
+    }
+
+    // PENDIENTE!!!!
+    // MÉTODO PARA LISTAR LOS PEDIDOS DE TODOS LOS CLIENTES PERO QUE NO APAREZCA
+    // EL CÓDIGO DEL CLIENTE SINO SU NOMBRE COMPLETO, ORDENADO POR NOMBRE COMPLETO DESC
 }
