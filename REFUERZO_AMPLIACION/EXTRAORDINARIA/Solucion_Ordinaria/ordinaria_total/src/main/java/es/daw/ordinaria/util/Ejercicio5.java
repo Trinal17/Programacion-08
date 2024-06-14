@@ -2,8 +2,11 @@ package es.daw.ordinaria.util;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
-
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import es.daw.ordinaria.bd.DaoCliente;
 import es.daw.ordinaria.bd.DaoPedido;
@@ -91,6 +94,8 @@ public class Ejercicio5 {
                 System.out.println("**** BORRAR PEDIDOS CUYO PRECIO SUPERA UN VALOR");
                 borrarPedido(daoP);
                 pintaPedidos(pedidos, daoP);
+
+                mostrarInformeCompletoOrdenado(daoC, daoP);
     
             }
 
@@ -159,7 +164,62 @@ public class Ejercicio5 {
 
     }
 
-    // PENDIENTE!!!!
     // MÉTODO PARA LISTAR LOS PEDIDOS DE TODOS LOS CLIENTES PERO QUE NO APAREZCA
     // EL CÓDIGO DEL CLIENTE SINO SU NOMBRE COMPLETO, ORDENADO POR NOMBRE COMPLETO DESC
+    private static void mostrarInformeCompletoOrdenado(DaoCliente daoC, DaoPedido daoP) throws SQLException{
+        List<Cliente> clientes = daoC.selectAll();
+        List<Pedido> pedidos = daoP.selectAll();
+
+        StringBuilder sb = new StringBuilder();
+        String nombreCompletoCliente = "";
+        Cliente cliente;
+
+        String todosNombres = "";
+
+        Map<String,Pedido> mapa = new TreeMap<>(Comparator.reverseOrder());
+
+        for (Pedido pedido : pedidos) {
+            sb.append(pedido.getId()).append(", ").
+            append(pedido.getPrecio()).append(", ").
+            append(pedido.getFecha()).append(", ");
+
+            // obtener el nombre
+            int idCliente = pedido.getIdCliente();
+
+            // 2 opciones: 
+            // - 2.1: Recorro la lista de cliente y busco el cliente cuyo código == idCliente
+            // - 2.2: Uso el método JDBC select(idCliente)
+
+            //cliente = daoC.select(idCliente);
+            //nombreCompletoCliente = cliente.getNombre()+" "+cliente.getApellido1()+" "+cliente.getApellido2();
+
+            for (Cliente c : clientes) {
+                if (c.getId() == idCliente){
+                    nombreCompletoCliente = c.getNombre()+" "+c.getApellido1()+" "+c.getApellido2();
+                }
+            }
+            
+
+            // Añado finalmente el nombre completo
+            sb.append(nombreCompletoCliente+"\n");
+
+            todosNombres += nombreCompletoCliente+"-";
+
+            // Insertar datos el Map
+            mapa.put(nombreCompletoCliente, pedido);
+
+            
+        }
+
+        System.out.println("* TODOS LOS NOMBRES A CHOLÓN: "+todosNombres);
+        System.out.println("********* INFORME COMPLETO (SIN ORDENAR) ******* ");
+        System.out.println(sb.toString());
+
+        System.out.println("********* INFORME COMPLETO (MAP ORDENADO) ******* ");
+        for (Map.Entry<String,Pedido> fila : mapa.entrySet()) {
+            System.out.println(fila.getKey()+"-"+fila.getValue());
+        }
+
+    }
+
 }

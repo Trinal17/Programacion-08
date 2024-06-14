@@ -25,7 +25,7 @@ public class DaoCliente implements Dao<Cliente>{
     @Override
     public Cliente select(int id) throws SQLException {
         ResultSet rs = null;
-        try ( PreparedStatement ps = con.prepareStatement("SELECT nombre,apellido1 FROM cliente where id = ?")
+        try ( PreparedStatement ps = con.prepareStatement("SELECT nombre,apellido1,apellido2 FROM cliente where id = ?")
          ) {
 
             ps.setInt(1, id);
@@ -36,6 +36,7 @@ public class DaoCliente implements Dao<Cliente>{
                 c = new Cliente();
                 c.setNombre(rs.getString("nombre"));
                 c.setApellido1(rs.getString("apellido1"));
+                c.setApellido2(rs.getString("apellido2"));
             }
             // else{
             //     c = new Cliente();
